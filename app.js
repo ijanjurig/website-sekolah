@@ -1,6 +1,6 @@
 // @ts-nocheck
 /* SchoolVerse frontend. Isi API_URL setelah deploy Google Apps Script. */
-const API_URL = "https://script.google.com/macros/s/AKfycbwHxHg0jGmEIF8axONOSDrzDTTY5xQiE8p5KE2lJY68DvcDRKfjw-WCagz8L_eq9y1H/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyo40WpmVM2akvysHg7TDqvd0t1M73AXrYofYmEuDR6gOyLd8LlW9VoYME6uT5YnWhb/exec";
 const $ = id => document.getElementById(id);
 const moduleList = [
   {id:"hub",icon:"▦",name:"SchoolHub",desc:"Pengumuman, jadwal, tugas, dan kegiatan sekolah."},
