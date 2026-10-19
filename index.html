@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a36">
+<meta name="description" content="SchoolVerse, ruang digital untuk siswa.">
+<title>SchoolVerse — Ruang Digital Siswa</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast hidden" role="status"></div>
+<section id="loginView" class="login-layout">
+  <div class="login-intro">
+    <div class="logo">b</div><p class="overline">RUANG DIGITAL SISWA</p>
+    <h1>Belajar, berkarya,<br><span>bertumbuh bersama.</span></h1>
+    <p class="intro-copy">SchoolVerse menyatukan informasi sekolah, pembelajaran, absensi, dan kreativitas siswa dalam satu ruang digital.</p>
+    <div class="chips"><span>✦ EduSmart</span><span>⌖ PresensiKu</span><span>▦ SchoolHub</span></div>
+    <div class="decor decor-a"></div><div class="decor decor-b"></div>
+  </div>
+  <form id="loginForm" class="login-card">
+    <div class="wordmark"><b>SV</b> SchoolVerse</div>
+    <h2>Selamat datang!</h2><p class="subcopy">Masuk menggunakan akun yang terdaftar di sekolah.</p>
+    <label for="loginId">Email, NIS, atau NISN</label><input id="loginId" autocomplete="username" placeholder="Contoh: siswa@sekolah.sch.id" required>
+    <label for="loginPassword">Token / password</label><div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Masukkan token atau password" required><button type="button" id="togglePassword" aria-label="Tampilkan password">◉</button></div>
+    <button class="btn btn-primary btn-wide" type="submit">Masuk ke SchoolVerse <span>→</span></button>
+    <p id="loginMessage" class="form-message" aria-live="polite"></p>
+    <p class="fine-print">Tidak bisa masuk? Hubungi admin sekolah. Jangan bagikan token atau password kepada orang lain.</p>
+  </form>
+</section>
+<section id="appView" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="wordmark side-wordmark"><b>SV</b> SchoolVerse</div>
+    <div class="account">
+      <div id="sideAvatar" class="avatar">S</div><div class="account-copy"><b id="sideName">Siswa</b><small id="sideMeta">Kelas</small></div>
+    </div>
+    <nav id="navigation">
+      <button class="nav-link active" data-page="home"><span>⌂</span> Beranda</button>
+      <button class="nav-link" data-page="hub"><span>▦</span> SchoolHub</button>
+      <button class="nav-link" data-page="edu"><span>✦</span> EduSmart</button>
+      <button class="nav-link" data-page="attendance"><span>⌖</span> PresensiKu</button>
+      <button class="nav-link" data-page="gallery"><span>▧</span> LensSchool</button>
+      <button class="nav-link" data-page="green"><span>♧</span> GreenSchool</button>
+      <button class="nav-link" data-page="pocket"><span>◉</span> PocketSmart</button>
+      <button class="nav-link" data-page="quiz"><span>◇</span> QuizBattle</button>
+      <button class="nav-link admin-link hidden" data-page="admin"><span>⚙</span> Panel Admin</button>
+      <button class="nav-link super-link hidden" data-page="manage"><span>♙</span> Kelola Admin</button>
+    </nav>
+    <button id="logoutButton" class="logout-button">↪ Keluar</button>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><p id="pageKicker" class="overline">DASHBOARD SISWA</p><h2 id="pageTitle">Beranda</h2></div><div class="top-profile"><span class="online-dot"></span><span id="topName">Siswa</span><div id="topAvatar" class="avatar avatar-small">S</div></div></header>
+    <div id="pageContent"></div>
+    <footer>SchoolVerse · Proyek prototipe sekolah · Data siswa harus dikelola secara terbatas</footer>
+  </main>
+</section>
+<script src="app.js"></script>
+</body></html>
